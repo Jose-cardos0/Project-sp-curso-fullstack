@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  --azulBtn: #0056fb;
+  --branCopainel: #ffff;
+  --pretoComum: #000;
+  --cinzaConect: #919191;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: var(--azulBtn);
+}
+
+.painel-esquerdo {
+  width: 50%;
+  background-color: var(--branCopainel);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    span {
+      font-size: 42px;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"],
+      input[type="email"] {
+        margin-top: 1rem;
+        padding: 0.5rem;
+      }
+
+      input::placeholder {
+        color: var(--pretoComum);
+        font-size: 12px;
+      }
+
+      .checkbox {
+        display: flex;
+        margin-top: 1rem;
+        font-size: 14px;
+        label {
+          display: flex;
+          input {
+            margin-right: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  .cadastrar {
+    p {
+      margin-top: 1rem;
+      font-size: 13px;
+      font-weight: bold;
+
+      a {
+        color: var(--cinzaConect);
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: var(--azulBtn);
+  color: var(--branCopainel);
+}
+
+.painel-direito {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-data {
+      box-sizing: border-box;
+      width: 32.813rem;
+      height: 22rem;
+    }
+  }
+  h1 {
+    width: 30rem;
+    height: 7rem;
+    letter-spacing: 5.5%;
+    margin-top: 1rem;
+    color: var(--branCopainel);
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  p {
+    display: flex;
+    align-items: start;
+    width: 27.375rem;
+    height: 5.063rem;
+    letter-spacing: 5.5%;
+    color: var(--branCopainel);
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .painel-direito {
+    .info {
+      .img-data {
+        width: 25rem;
+        height: 18rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .painel-direito {
+    .info {
+      .img-data {
+        width: 20rem;
+        height: 12rem;
+      }
+    }
+
+    .text-info {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+    }
+    h1 {
+      width: 100%;
+      letter-spacing: 5.5%;
+      margin-top: 1rem;
+      color: var(--branCopainel);
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    p {
+      display: flex;
+      text-align: justify;
+      align-items: start;
+      width: 100%;
+      letter-spacing: 5.5%;
+      color: var(--branCopainel);
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .painel-esquerdo {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--branCopainel);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        span {
+          font-size: 30px;
+          font-weight: bold;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+
+          input[type="text"],
+          input[type="password"],
+          input[type="submit"],
+          input[type="email"] {
+            margin-top: 1rem;
+            padding: 0.5rem;
+          }
+
+          input::placeholder {
+            color: var(--pretoComum);
+            font-size: 12px;
+          }
+
+          .checkbox {
+            display: flex;
+            margin-top: 1rem;
+            font-size: 14px;
+            label {
+              display: flex;
+              input {
+                margin-right: 0.6rem;
+              }
+            }
+          }
+        }
+      }
+
+      .cadastrar {
+        p {
+          margin-top: 1rem;
+          font-size: 13px;
+          font-weight: bold;
+
+          a {
+            color: var(--cinzaConect);
+          }
+        }
+      }
+    }
+
+    .painel-direito {
+      width: 100%;
+      height: 100vh;
+      .info {
+        .img-data {
+          width: 20rem;
+          height: 15rem;
+        }
+      }
+
+      .text-info {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+      }
+      h1 {
+        letter-spacing: 5.5%;
+        margin-top: 1rem;
+        color: var(--branCopainel);
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      p {
+        display: flex;
+        font-size: 15px;
+        text-align: justify;
+        align-items: start;
+        letter-spacing: 5.5%;
+        color: var(--branCopainel);
+        margin-top: 1rem;
+      }
+    }
+  }
+}
